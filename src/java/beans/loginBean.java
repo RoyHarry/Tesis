@@ -61,10 +61,11 @@ public class loginBean implements Serializable{
             ruta= MyUtil.basepathlogin()+"views/inicio.xhtml";
         } else {
             loggedIn = false;
-            message = new FacesMessage(FacesMessage.SEVERITY_WARN, "Loggin Error", "Usuario y/o clave son incorrectos");
             if(this.usuario==null){
             this.usuario=new Usuario();
         }
+            message = new FacesMessage(FacesMessage.SEVERITY_WARN, "Loggin Error", "Usuario y/o clave son incorrectos");
+            
         }
          
         FacesContext.getCurrentInstance().addMessage(null, message);

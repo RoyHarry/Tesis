@@ -13,6 +13,6 @@ public class MyUtil {
         return "http://localhost:8080/Tesis/";
     }
     public static String basepathlogin(){
-        return "/Tesis/faces/";
+        return "http://localhost:8080/Tesis/faces/";
     }
 }
