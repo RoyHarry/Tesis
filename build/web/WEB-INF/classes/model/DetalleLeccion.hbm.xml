@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 14-may-2015 16:14:40 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="model.DetalleLeccion" table="detalle_leccion" catalog="tesis">
+        <id name="iddetalleLeccion" type="java.lang.Integer">
+            <column name="iddetalle_leccion" />
+            <generator class="identity" />
+        </id>
+        <property name="numeroPregunta" type="string">
+            <column name="numero_pregunta" length="45" />
+        </property>
+        <property name="pregunta" type="string">
+            <column name="pregunta" length="45" />
+        </property>
+        <property name="respuesta" type="string">
+            <column name="respuesta" length="45" />
+        </property>
+        <property name="estado" type="string">
+            <column name="estado" length="45" />
+        </property>
+        <property name="mensaje" type="string">
+            <column name="mensaje" length="45" />
+        </property>
+        <property name="observacion" type="string">
+            <column name="observacion" length="45" />
+        </property>
+        <property name="puntuacion" type="string">
+            <column name="puntuacion" length="45" />
+        </property>
+        <set name="leccions" inverse="true">
+            <key>
+                <column name="detalle_leccion_iddetalle_leccion" not-null="true" />
+            </key>
+            <one-to-many class="model.Leccion" />
+        </set>
+    </class>
+</hibernate-mapping>

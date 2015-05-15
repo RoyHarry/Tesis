@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 14-may-2015 16:14:40 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="model.Ciclo" table="ciclo" catalog="tesis">
+        <id name="idciclo" type="java.lang.Integer">
+            <column name="idciclo" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="45" />
+        </property>
+        <property name="fechaInicio" type="date">
+            <column name="fecha_inicio" length="10" />
+        </property>
+        <property name="fechaFin" type="date">
+            <column name="fecha_fin" length="10" />
+        </property>
+        <set name="cursos" inverse="true">
+            <key>
+                <column name="ciclo_idciclo" not-null="true" />
+            </key>
+            <one-to-many class="model.Curso" />
+        </set>
+    </class>
+</hibernate-mapping>

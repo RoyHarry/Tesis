@@ -1,0 +1,14 @@
+body{
+    background-color: #ECF3FD;
+    
+}
+.conteiner{
+    width: 400px;
+    margin-left: 40%;
+    margin-right: auto;
+    margin-top: 18%;
+    font-size: 85%;
+}
+.ui-state-default .icon-login{
+    background-image: url(../images/icons/login.png);
+}
